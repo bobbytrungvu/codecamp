@@ -1,0 +1,192 @@
+{
+  "media": {
+    "input": "media",
+    "output": "media",
+    "extensions": [
+      "png",
+      "jpg",
+      "jpeg",
+      "webp",
+      "svg"
+    ]
+  },
+  "content": [
+    {
+      "name": "homepage",
+      "label": "CodeCamp page",
+      "type": "file",
+      "path": "content.json",
+      "format": "json",
+      "fields": [
+        {
+          "name": "page_title",
+          "label": "Browser tab title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "tagline",
+          "label": "Tagline",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "credit",
+          "label": "Workshop credit",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "intro_title",
+          "label": "Introduction heading",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "intro_text",
+          "label": "Introduction text",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "aim_1_text",
+          "label": "Aim 1: slogan",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "aim_2_text",
+          "label": "Aim 2: slogan",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "aim_3_text",
+          "label": "Aim 3: slogan",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "programme_title",
+          "label": "Programme heading",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "week_1_number",
+          "label": "Programme 1: week number",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "week_1_title",
+          "label": "Programme 1: title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "week_1_text",
+          "label": "Programme 1: description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "week_2_number",
+          "label": "Programme 2: week number",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "week_2_title",
+          "label": "Programme 2: title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "week_2_text",
+          "label": "Programme 2: description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "week_3_number",
+          "label": "Programme 3: week number",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "week_3_title",
+          "label": "Programme 3: title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "week_3_text",
+          "label": "Programme 3: description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "welcome_title",
+          "label": "Beginners heading",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "welcome_text",
+          "label": "Beginners text",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "logo",
+          "label": "Logo",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "aim_1_image",
+          "label": "Aim 1: graphic",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "aim_2_image",
+          "label": "Aim 2: graphic",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "aim_3_image",
+          "label": "Aim 3: graphic",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "welcome_image",
+          "label": "Beginners graphic",
+          "type": "image",
+          "required": true
+        },
+        {
+          "name": "registration_label",
+          "label": "Registration button text",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "registration_url",
+          "label": "Registration URL (updates both buttons)",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "qr_image",
+          "label": "Registration QR image (optional)",
+          "type": "image",
+          "required": false
+        }
+      ]
+    }
+  ]
+}
