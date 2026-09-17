@@ -62,8 +62,10 @@
       .tagline { font-size: clamp(10px, 3.1vw, 13px); }
       .aim { padding: 0 5px; }
       .smiley { flex-basis: 80px; width: 80px; }
+    }
+    @media screen and (max-width: 767px) {
       .signup { flex-direction: column; gap: 20px; }
-      .qr { flex: none; width: 140px; height: 140px; font-size: 13px; }
+      .qr { flex: none; width: 140px; height: 140px; }
     }
     @media print {
       @page { size: A4 portrait; margin: 12mm; }
