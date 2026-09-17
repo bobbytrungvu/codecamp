@@ -30,16 +30,24 @@ async function loadContent() {
         link.removeAttribute('aria-disabled');
       }
     });
-    const qrURL = imageURL(content.qr_image);
-    if (qrURL) {
-      const image = document.createElement('img');
-      image.src = qrURL;
-      image.alt = 'Scan to register your interest';
-      const container = document.querySelector('.qr');
-      image.addEventListener('load', () => {
+    if (registrationURL) {
+      try {
+        qrcode.stringToBytes = value => Array.from(new TextEncoder().encode(value));
+        const code = qrcode(0, 'M');
+        code.addData(registrationURL);
+        code.make();
+        const image = document.createElement('img');
+        image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(
+          code.createSvgTag({ cellSize: 4, margin: 16, scalable: true })
+        );
+        image.alt = 'Scan to register your interest';
+        const container = document.querySelector('.qr');
         container.replaceChildren(image);
-        container.removeAttribute('aria-label');
-      }, { once: true });
+        container.hidden = false;
+      } catch (error) {
+        // Registration buttons remain usable if a URL exceeds QR capacity.
+        console.error('CodeCamp QR code:', error);
+      }
     }
   } catch (error) {
     // The original content remains readable if the content request fails.

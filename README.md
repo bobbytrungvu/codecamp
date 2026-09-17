@@ -14,11 +14,11 @@ The site has no build step. Its homepage is `index.html`.
 
 Open **CodeCamp page**, edit the labelled fields and save. Wait for GitHub Pages to finish publishing, then refresh the public website.
 
-- Registration URL: paste the complete https:// address. This updates both buttons. Empty or invalid URLs leave registration inactive.
+- Registration URL: paste the complete https:// address. This updates both buttons and automatically generates the registration QR code. Empty or invalid URLs leave registration inactive and hide the QR code.
 - Registration button text: updates both buttons while keeping their different sizes.
 - Text: use plain text. The layout and formatting are managed separately.
 - Images: select or upload an image through the image field.
-- Registration QR image: upload a QR code pointing to the registration URL. This does not generate a QR code automatically. If you change the URL, replace the QR image too. Leave blank to show the placeholder.
+- Registration QR code: generated in the browser from the Registration URL. No image upload or external QR service is needed.
 
 Changes saved to the publishing branch go live after deployment. Coordinate edits to this single page to avoid overwriting each other's changes.
 
@@ -27,8 +27,9 @@ Changes saved to the publishing branch go live after deployment. Coordinate edit
 - `content.json`: editable text, image paths and registration URL.
 - `.pages.yml`: Pages CMS field configuration, written in JSON-compatible YAML.
 - `index.html`: layout, styling and fallback content.
-- `content.js`: loads the saved content into the page. Uses plain JavaScript with no dependencies.
+- `content.js`: loads the saved content into the page. Uses plain JavaScript and the bundled QR generator.
 - `media/`: images managed through the editor.
+- `vendor/qrcode.js`: qrcode-generator 1.4.4 by Kazuhiko Arase, distributed under the MIT license included in the file. Source: https://github.com/kazuhikoarase/qrcode-generator
 
 View through a web server or GitHub Pages. Double-clicking the HTML as a local file does not allow the browser to load the content file. JavaScript must be enabled to show CMS updates. If loading fails, the original fallback copy remains visible.
 

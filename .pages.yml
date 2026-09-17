@@ -176,14 +176,8 @@
         },
         {
           "name": "registration_url",
-          "label": "Registration URL (updates both buttons)",
+          "label": "Registration URL (updates both buttons and QR code)",
           "type": "string",
-          "required": false
-        },
-        {
-          "name": "qr_image",
-          "label": "Registration QR image (optional)",
-          "type": "image",
           "required": false
         }
       ]
